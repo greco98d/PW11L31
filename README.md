@@ -17,3 +17,6 @@ L'applicativo permette di analizzare la domanda storica di un triennio e calcola
 Non sono richieste librerie aggiuntive in quanto il codice utilizza semplicemente i moduli standard.
 - Python 3.x
 - Librerie standard: `tkinter`, `math` (python -m tkinter per la verifica)
+
+
+** Versione: Alpha (v0.1)**
