@@ -1,22 +1,37 @@
-# Software Gestione Scorte - EOQ e ROP
-### Progetto per la prova finale L-31 - Informatica per le aziende digitali
+# Gestione Scorte — EOQ e ROP con Safety Stock
+### Project Work 11 — L-31 Informatica per le Aziende Digitali
 
-Questo repository contiene il software sviluppato per la prova finale, focalizzato sull'ottimizzazione del magazzino tramite i modelli EOQ (Economic Order Quantity) e ROP (Reorder Point).
+Software per il calcolo del Lotto Economico di Ordinazione (EOQ) e del Livello di Riordino (ROP), con supporto alla Scorta di Sicurezza (Safety Stock).
 
-## Descrizione
-L'applicativo permette di analizzare la domanda storica di un triennio e calcolare i parametri ottimali per la gestione delle scorte, includendo il calcolo della scorta di sicurezza.
+## Funzionalita'
 
+- Calcolo EOQ tramite la formula di Wilson: `sqrt((2 * D * S) / H)`
+- Calcolo della Scorta di Sicurezza: `Z * sigma * sqrt(L)`, con sigma derivata automaticamente dai dati storici
+- Calcolo del Punto di Riordino: `ROP = d * L + SS`
+- Confronto diretto tra modello classico (senza SS) e modello con Scorta di Sicurezza
+- Checkbox per selezionare il modello di calcolo
+- Validazione degli input con messaggi di errore specifici
 
-## Funzionalità
-- Analisi domanda media triennale.
-- Calcolo del Lotto Economico di Ordinazione (Wilson).
-- Calcolo della Scorta di Sicurezza e del Punto di Riordino (ROP).
-- Interfaccia Grafica intuitiva realizzata con Tkinter.
+## Esecuzione
 
-## Requisiti
-Non sono richieste librerie aggiuntive in quanto il codice utilizza semplicemente i moduli standard.
-- Python 3.x
-- Librerie standard: `tkinter`, `math` (python -m tkinter per la verifica)
+Requisiti: Python 3.x — nessuna dipendenza esterna, solo librerie standard.
 
+```bash
+python pw11greco.py
+```
 
-** Versione: Alpha (v0.1)**
+## Struttura del codice
+
+| Componente | Responsabilita' |
+|---|---|
+| `InventoryInputs` | Raccoglie i dati inseriti dall'utente |
+| `InventoryResults` | Contiene tutti i risultati calcolati |
+| `compute_results()` | Orchestra i calcoli in sequenza |
+| `validate()` | Controlla la correttezza degli input |
+| `format_classic_results()` | Formatta l'output del modello classico |
+| `format_results_with_safety_stock()` | Formatta l'output con SS e tabella di confronto |
+| `InventoryApp` | Gestisce l'interfaccia grafica |
+
+## Documentazione
+
+Vedere `relazione.md` per la descrizione completa delle formule, l'analisi dei risultati e il confronto tra i modelli.
