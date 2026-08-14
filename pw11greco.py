@@ -104,7 +104,7 @@ def compute_results(inputs: InventoryInputs) -> InventoryResults:
 # ---------------------------------------------------------------------------
 
 def validate(inputs: InventoryInputs, include_safety_stock: bool) -> None:
-    """ValueError con un messaggio user-friendly se qualche input è invalido."""
+    """ValueError con un messaggio user-friendly se qualche input e' invalido."""
     demands = [inputs.year1_demand, inputs.year2_demand, inputs.year3_demand]
     if any(d <= 0 for d in demands):
         raise ValueError("I valori di domanda devono essere strettamente positivi.")

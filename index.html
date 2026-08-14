@@ -9,11 +9,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
 
-    /* ── Reset ─────────────────────────────────────────────────── */
+    /* ── Azzeramento ──────────────────────────────────────────────────── */
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    /* ── Design tokens ─────────────────────────────────────────── */
+    /* ── Token di design ──────────────────────────────────────────── */
 
     :root {
       --color-blue-700:     #1D4ED8;
@@ -48,7 +48,7 @@
       --shadow-blue:   0 4px 20px rgba(37,99,235,.28);
     }
 
-    /* ── Base ──────────────────────────────────────────────────── */
+    /* ── Base ────────────────────────────────────────────────────── */
 
     html { scroll-behavior: smooth; }
 
@@ -60,7 +60,7 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ── Navigation bar ────────────────────────────────────────── */
+    /* ── Barra di navigazione ────────────────────────────────────────── */
 
     .nav-bar {
       position: sticky;
@@ -128,7 +128,7 @@
       box-shadow: var(--shadow-blue) !important;
     }
 
-    /* ── Hero section ──────────────────────────────────────────── */
+    /* ── Sezione hero ────────────────────────────────────────────── */
 
     .hero {
       position: relative;
@@ -137,7 +137,7 @@
       text-align: center;
     }
 
-    /* Soft radial glow behind the headline */
+    /* Morbido bagliore radiale dietro il titolo */
     .hero__background-glow {
       position: absolute;
       top: -120px;
@@ -226,7 +226,7 @@
       background: var(--color-gray-200);
     }
 
-    /* ── Calculator section ────────────────────────────────────── */
+    /* ── Sezione calcolatore ────────────────────────────────────── */
 
     .calculator-section {
       max-width: 800px;
@@ -242,7 +242,7 @@
       box-shadow: var(--shadow-large);
     }
 
-    /* ── Calculator header ─────────────────────────────────────── */
+    /* ── Intestazione calcolatore ─────────────────────────────────────── */
 
     .calculator-card__header {
       display: flex;
@@ -266,7 +266,7 @@
       color: var(--color-gray-500);
     }
 
-    /* ── Model selector (segmented control) ────────────────────── */
+    /* ── Selettore modello (controllo segmentato) ────────────────────── */
 
     .model-selector {
       display: flex;
@@ -296,11 +296,11 @@
       box-shadow: var(--shadow-small);
     }
 
-    /* ── Calculator body ───────────────────────────────────────── */
+    /* ── Corpo calcolatore ───────────────────────────────────────── */
 
     .calculator-card__body { padding: 36px 40px; }
 
-    /* ── Form sections ─────────────────────────────────────────── */
+    /* ── Sezioni modulo ─────────────────────────────────────────── */
 
     .form-section { margin-bottom: 30px; }
 
@@ -316,7 +316,7 @@
       color: var(--color-gray-400);
     }
 
-    /* Decorative line that fills the remaining space after the heading */
+    /* Linea decorativa che riempie lo spazio rimanente dopo l'intestazione */
     .form-section__heading::after {
       content: '';
       flex: 1;
@@ -327,7 +327,7 @@
     .three-column-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
     .two-column-grid   { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
 
-    /* ── Input field ───────────────────────────────────────────── */
+    /* ── Campo di input ───────────────────────────────────────────── */
 
     .input-field { display: flex; flex-direction: column; gap: 6px; }
 
@@ -366,7 +366,7 @@
       color: var(--color-gray-400);
     }
 
-    /* ── Safety stock section (toggled by model selector) ──────── */
+    /* ── Sezione scorta di sicurezza (attivata dal selettore di modello) ──────── */
 
     .safety-stock-section { transition: opacity .25s, filter .25s; }
 
@@ -376,7 +376,7 @@
       pointer-events: none;
     }
 
-    /* ── Calculate button ──────────────────────────────────────── */
+    /* ── Pulsante di calcolo ──────────────────────────────────────── */
 
     .calculate-button {
       width: 100%;
@@ -401,7 +401,7 @@
 
     .calculate-button:active { transform: scale(.99); }
 
-    /* ── Error box ─────────────────────────────────────────────── */
+    /* ── Casella di errore ─────────────────────────────────────────────── */
 
     .error-box {
       display: none;
@@ -417,7 +417,7 @@
 
     .error-box--visible { display: block; }
 
-    /* ── Results panel ─────────────────────────────────────────── */
+    /* ── Pannello dei risultati ─────────────────────────────────────────── */
 
     .results-panel {
       display: none;
@@ -436,7 +436,7 @@
       to   { opacity: 1; transform: translateY(0);     }
     }
 
-    /* Reusable section divider label (used both in the form and in results) */
+    /* Etichetta separatore di sezione riutilizzabile (usata sia nel modulo che nei risultati) */
     .section-divider-label {
       display: flex;
       align-items: center;
@@ -456,7 +456,7 @@
       background: var(--color-gray-100);
     }
 
-    /* ── Summary strip ─────────────────────────────────────────── */
+    /* ── Striscia di riepilogo ─────────────────────────────────────────── */
 
     .summary-strip {
       display: flex;
@@ -484,7 +484,7 @@
       color: var(--color-gray-800);
     }
 
-    /* ── Metric cards ──────────────────────────────────────────── */
+    /* ── Schede metriche ──────────────────────────────────────────── */
 
     .metric-cards {
       display: grid;
@@ -504,7 +504,7 @@
       background: var(--color-gray-50);
     }
 
-    /* Coloured top accent bar, one per metric type */
+    /* Barra di accento superiore colorata, una per tipo di metrica */
     .metric-card::before {
       content: '';
       position: absolute;
@@ -540,7 +540,7 @@
       color: var(--color-gray-400);
     }
 
-    /* ── Comparison table ──────────────────────────────────────── */
+    /* ── Tabella di confronto ──────────────────────────────────────── */
 
     .comparison-table {
       overflow: hidden;
@@ -548,7 +548,7 @@
       border-radius: var(--radius-medium);
     }
 
-    /* Column widths: parameter name | classic value | SS value */
+    /* Larghezze colonne: nome parametro | valore classico | valore SS */
     .comparison-header,
     .comparison-row { display: grid; grid-template-columns: 1fr 120px 120px; }
 
@@ -622,7 +622,7 @@
       color: var(--color-blue-600);
     }
 
-    /* ── Features section ──────────────────────────────────────── */
+    /* ── Sezione funzionalità ──────────────────────────────────────── */
 
     .features-section {
       padding: 64px 2rem;
@@ -691,7 +691,7 @@
       color: var(--color-gray-500);
     }
 
-    /* ── Footer ────────────────────────────────────────────────── */
+    /* ── Piè di pagina ────────────────────────────────────────────────── */
 
     .page-footer {
       display: flex;
@@ -715,7 +715,7 @@
       color: var(--color-gray-500);
     }
 
-    /* ── Responsive ────────────────────────────────────────────── */
+    /* ── Responsivo ────────────────────────────────────────────── */
 
     @media (max-width: 680px) {
       .nav-bar { padding: 0 1.2rem; }
@@ -736,7 +736,7 @@
 </head>
 <body>
 
-  <!-- ── Navigation bar ──────────────────────────────────────── -->
+  <!-- ── Barra di navigazione ──────────────────────────────────────── -->
   <nav class="nav-bar">
     <a class="nav-bar__logo" href="#">
       <div class="nav-bar__logo-icon">
@@ -755,7 +755,7 @@
     </ul>
   </nav>
 
-  <!-- ── Hero ────────────────────────────────────────────────── -->
+  <!-- ── Sezione hero ────────────────────────────────────────────────── -->
   <section class="hero">
     <div class="hero__background-glow"></div>
 
@@ -792,7 +792,7 @@
     </div>
   </section>
 
-  <!-- ── Calculator ───────────────────────────────────────────── -->
+  <!-- ── Calcolatore ───────────────────────────────────────────── -->
   <section class="calculator-section">
     <div class="calculator-card">
 
@@ -809,7 +809,7 @@
 
       <div class="calculator-card__body">
 
-        <!-- Historical demand -->
+        <!-- Domanda storica -->
         <div class="form-section">
           <div class="form-section__heading">Domanda Storica — 3 anni</div>
           <div class="three-column-grid">
@@ -828,7 +828,7 @@
           </div>
         </div>
 
-        <!-- Economic parameters -->
+        <!-- Parametri economici -->
         <div class="form-section">
           <div class="form-section__heading">Parametri Economici</div>
           <div class="three-column-grid">
@@ -850,7 +850,7 @@
           </div>
         </div>
 
-        <!-- Safety stock parameters (hidden when classic model is active) -->
+        <!-- Parametri scorta di sicurezza (nascosti quando il modello classico è attivo) -->
         <div class="form-section safety-stock-section" id="safety-stock-section">
           <div class="form-section__heading">Scorta di Sicurezza</div>
           <div class="two-column-grid">
@@ -866,7 +866,7 @@
 
         <div class="error-box" id="error-box"></div>
 
-        <!-- Results panel (hidden until a calculation is run) -->
+        <!-- Pannello dei risultati (nascosto finché non viene eseguito un calcolo) -->
         <div class="results-panel" id="results-panel">
           <div class="section-divider-label">Risultati</div>
           <div class="summary-strip"  id="summary-strip"></div>
@@ -878,7 +878,7 @@
     </div>
   </section>
 
-  <!-- ── Features ─────────────────────────────────────────────── -->
+  <!-- ── Funzionalità ─────────────────────────────────────────────── -->
   <section class="features-section" id="features">
     <div class="features-section__inner">
       <h2 class="features-section__title">Tutto quello che serve per gestire le scorte</h2>
@@ -919,7 +919,7 @@
     </div>
   </section>
 
-  <!-- ── Footer ───────────────────────────────────────────────── -->
+  <!-- ── Piè di pagina ───────────────────────────────────────────────── -->
   <footer class="page-footer">
     <span class="page-footer__logo">InventIQ</span>
     <span class="page-footer__note">Project Work 11 &mdash; L-31 Informatica per le Aziende Digitali</span>
@@ -928,12 +928,12 @@
 
   <script>
 
-    // ── Configuration ────────────────────────────────────────────
+    // ── Configurazione ────────────────────────────────────────────
 
     const DAYS_PER_YEAR = 365;
 
-    // ── Math: pure functions, one formula each ───────────────────
-    // No DOM access. No side effects. Easy to test in isolation.
+    // ── Matematica: funzioni pure, una formula per funzione ───────────────────
+    // Nessun accesso DOM. Nessun effetto collaterale. Facile da testare isolatamente.
 
     function averageOfThree(a, b, c) {
       return (a + b + c) / 3;
@@ -942,11 +942,11 @@
     function sampleStandardDeviation(a, b, c) {
       const mean = averageOfThree(a, b, c);
       const sumOfSquaredDeviations = (a - mean) ** 2 + (b - mean) ** 2 + (c - mean) ** 2;
-      return Math.sqrt(sumOfSquaredDeviations / 2); // divided by n - 1 = 2
+      return Math.sqrt(sumOfSquaredDeviations / 2); // diviso per n - 1 = 2
     }
 
     function wilsonEOQ(averageDemand, setupCost, holdingCost) {
-      // The order quantity that minimises total inventory cost: sqrt((2DS)/H)
+      // La quantità di ordine che minimizza il costo totale di inventario: sqrt((2DS)/H)
       return Math.sqrt((2 * averageDemand * setupCost) / holdingCost);
     }
 
@@ -955,16 +955,16 @@
     }
 
     function safetyStock(serviceLevelZ, demandStdDev, leadTimeDays) {
-      // Buffer stock to absorb demand variability during lead time: Z * sigma * sqrt(L)
+      // Stock tampone per assorbire la variabilità della domanda durante il lead time: Z * sigma * sqrt(L)
       return serviceLevelZ * demandStdDev * Math.sqrt(leadTimeDays);
     }
 
     function reorderPoint(dailyDemand, leadTimeDays, safetyStockQty = 0) {
-      // Stock level at which a new order must be placed: d * L + SS
+      // Livello di stock al quale deve essere effettuato un nuovo ordine: d * L + SS
       return dailyDemand * leadTimeDays + safetyStockQty;
     }
 
-    // ── Domain: compute all results from inputs ──────────────────
+    // ── Dominio: calcola tutti i risultati dai dati di input ──────────────────
 
     function computeInventoryResults(inputs, includeSafetyStock) {
       const averageDemand  = averageOfThree(inputs.year1Demand, inputs.year2Demand, inputs.year3Demand);
@@ -978,8 +978,8 @@
       return { averageDemand, demandStdDev, dailyDemand, eoq, ss, classicROP, safeROP };
     }
 
-    // ── Validation ───────────────────────────────────────────────
-    // Returns an error message string, or null if all inputs are valid.
+    // ── Convalida ───────────────────────────────────────────────
+    // Restituisce una stringa di messaggio di errore, o null se tutti i dati di input sono validi.
 
     function validateInputs(inputs, includeSafetyStock) {
       const demands = [inputs.year1Demand, inputs.year2Demand, inputs.year3Demand];
@@ -1002,7 +1002,7 @@
       return null;
     }
 
-    // ── Formatting ───────────────────────────────────────────────
+    // ── Formattazione ───────────────────────────────────────────────
 
     function formatInteger(n) {
       return Math.round(n).toLocaleString('it-IT');
@@ -1015,7 +1015,7 @@
       });
     }
 
-    // ── DOM: reading inputs from the form ────────────────────────
+    // ── DOM: leggi i dati di input dal modulo ────────────────────────
 
     function readNumericField(id) {
       return parseFloat(document.getElementById(id).value);
@@ -1033,7 +1033,7 @@
       };
     }
 
-    // ── DOM: building HTML fragments ─────────────────────────────
+    // ── DOM: costruisci frammenti HTML ─────────────────────────────
 
     function buildSummaryItem(label, value) {
       return `
@@ -1061,7 +1061,7 @@
         </div>`;
     }
 
-    // ── DOM: rendering result sections ───────────────────────────
+    // ── DOM: renderizza sezioni risultati ───────────────────────────
 
     function renderSummaryStrip(results, includeSafetyStock) {
       const stdDevItem = includeSafetyStock
@@ -1140,7 +1140,7 @@
       animateResultsPanelIntoView();
     }
 
-    // ── UI state ─────────────────────────────────────────────────
+    // ── Stato UI ─────────────────────────────────────────────────
 
     let activeModel = 'ss'; // 'classic' | 'ss'
 
